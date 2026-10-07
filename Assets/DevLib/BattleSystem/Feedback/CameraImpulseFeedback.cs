@@ -6,7 +6,7 @@ namespace DevLib.BattleSystem.Feedback
     public class CameraImpulseFeedback : AbstractFeedback
     {
         [SerializeField] private CameraShakeDataSO    _shakeData;
-        [SerializeField] private CinemachineImpulseSource _impulseSource;
+        [SerializeField] private CinemachineImpulseSource _impulseSource;   
 
         public override void PlayFeedback()
         {
