@@ -1,0 +1,128 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e65154a53a0b682408a0f5f904924243, type: 3}
+  m_Name: Skill_FlameRing
+  m_EditorClassIdentifier: Assembly-CSharp::ElementMage.SkillData
+  id: 2
+  displayName: "\uD654\uC5FC \uACE0\uB9AC"
+  element: 1
+  kind: 0
+  icon: {fileID: 21300000, guid: 7f9a3868a87cd894ab9c83b80bcb25a4, type: 3}
+  summary: "\uD654\uC5FC \uACE0\uB9AC\uAC00 \uD654\uBA74 \uC548\uC744 \uB3CC\uC544\uB2E4\uB2C8\uBA70 \uACBD\uACC4\uC5D0\uC11C \uD295\uAE34\uB2E4. \uC801\uC744 \uAD00\uD1B5\uD55C\uB2E4."
+  fieldGuide: "damage 1\uD68C \uD53C\uD574 / count \uACE0\uB9AC \uC218 / area \uACE0\uB9AC \uBC18\uC9C0\uB984 / speed \uC774\uB3D9\uC18D\uB3C4 / tickInterval \uC801\uBCC4 \uC7AC\uD53C\uACA9 \uAC04\uACA9\nspecial \uBC18\uC0AC \uD33D\uCC3D \uBC30\uC728(0=\uC5C6\uC74C) / special2 \uD478\uB978 \uD654\uC5FC \uC18D\uB3C4\xB7\uD53C\uD574 \uBC30\uC728(0=\uC5C6\uC74C) / duration \uD478\uB978 \uD654\uC5FC \uC9C0\uC18D\nextras: expandDuration \uD33D\uCC3D \uC2DC\uAC04, blueCooldown Lv.7 \uC7AC\uBC1C\uB3D9 \uB300\uAE30(\uBBF8\uC815, \uAE30\uBCF8 0), boundsScale \uC804\uD22C \uC601\uC5ED \uD06C\uAE30(\uD654\uBA74 \uB300\uBE44)"
+  mainSprite: {fileID: 21300000, guid: 01752835ea23b4b4d93830d4db1f7925, type: 3}
+  subSprite: {fileID: 0}
+  effectSprite: {fileID: 0}
+  color: {r: 1, g: 0.55, b: 0.15, a: 1}
+  finalColor: {r: 0.35, g: 0.7, b: 1, a: 1}
+  levels:
+  - description: "\uBC18\uC0AC \uC774\uB3D9\uD558\uB294 \uD654\uC5FC \uACE0\uB9AC 1\uAC1C"
+    damage: 6
+    cooldown: 0
+    count: 1
+    area: 0.9
+    speed: 5
+    duration: 0
+    range: 0
+    tickInterval: 0.4
+    special: 0
+    special2: 0
+  - description: "\uD53C\uD574\uB7C9 \uC99D\uAC00"
+    damage: 8.5
+    cooldown: 0
+    count: 1
+    area: 0.9
+    speed: 5
+    duration: 0
+    range: 0
+    tickInterval: 0.4
+    special: 0
+    special2: 0
+  - description: "\uACE0\uB9AC \uD06C\uAE30 \uBC0F \uC774\uB3D9\uC18D\uB3C4 \uC99D\uAC00"
+    damage: 8.5
+    cooldown: 0
+    count: 1
+    area: 1.2
+    speed: 6.5
+    duration: 0
+    range: 0
+    tickInterval: 0.4
+    special: 0
+    special2: 0
+  - description: "\uD654\uC5FC \uACE0\uB9AC 2\uAC1C"
+    damage: 8.5
+    cooldown: 0
+    count: 2
+    area: 1.2
+    speed: 6.5
+    duration: 0
+    range: 0
+    tickInterval: 0.4
+    special: 0
+    special2: 0
+  - description: "\uD53C\uD574\uB7C9 \uCD94\uAC00 \uC99D\uAC00"
+    damage: 11.5
+    cooldown: 0
+    count: 2
+    area: 1.2
+    speed: 6.5
+    duration: 0
+    range: 0
+    tickInterval: 0.4
+    special: 0
+    special2: 0
+  - description: "\uACBD\uACC4\uC5D0\uC11C \uBC18\uC0AC\uD560 \uB54C \uC21C\uAC04 \uD33D\uCC3D"
+    damage: 11.5
+    cooldown: 0
+    count: 2
+    area: 1.2
+    speed: 6.5
+    duration: 0
+    range: 0
+    tickInterval: 0.4
+    special: 1.6
+    special2: 0
+  - description: "\uACE0\uB9AC\uAC00 \uC801\uC744 \uCC98\uCE58\uD558\uBA74 \uC77C\uC815 \uC2DC\uAC04 \uD478\uB978 \uD654\uC5FC (\uC18D\uB3C4\xB7\uD53C\uD574 \uC99D\uAC00)"
+    damage: 11.5
+    cooldown: 0
+    count: 2
+    area: 1.2
+    speed: 6.5
+    duration: 4
+    range: 0
+    tickInterval: 0.4
+    special: 1.6
+    special2: 1.5
+  extras:
+  - key: expandDuration
+    value: 0.5
+  - key: blueCooldown
+    value: 0
+  - key: boundsScale
+    value: 0.95
+  hasEvolution: 0
+  evolutionName: 
+  evolutionDescription: 
+  evolutionIcon: {fileID: 0}
+  evolutionRequiredPassive: {fileID: 0}
+  evolutionStats:
+    description: 
+    damage: 0
+    cooldown: 0
+    count: 0
+    area: 0
+    speed: 0
+    duration: 0
+    range: 0
+    tickInterval: 0
+    special: 0
+    special2: 0

@@ -1,0 +1,122 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e65154a53a0b682408a0f5f904924243, type: 3}
+  m_Name: Skill_Meteor
+  m_EditorClassIdentifier: Assembly-CSharp::ElementMage.SkillData
+  id: 3
+  displayName: "\uC6B4\uC11D"
+  element: 1
+  kind: 0
+  icon: {fileID: 21300000, guid: 1b560c26dbcd04b4f909bca0597c6da0, type: 3}
+  summary: "\uC801\uC774 \uBAB0\uB9B0 \uACF3\uC5D0 \uC6B4\uC11D\uC774 \uB5A8\uC5B4\uC838 \uB113\uC740 \uBC94\uC704\uB97C \uD3ED\uACA9\uD55C\uB2E4."
+  fieldGuide: "damage \uD3ED\uBC1C \uD53C\uD574 / cooldown / count \uC6B4\uC11D \uC218 / area \uD3ED\uBC1C \uBC18\uC9C0\uB984 / duration \uB099\uD558 \uC2DC\uAC04\ntickInterval \uC6B4\uC11D \uC0AC\uC774 \uAC04\uACA9 / range \uB300\uC0C1 \uD0D0\uC0C9 \uBC18\uACBD"
+  mainSprite: {fileID: 21300000, guid: f5346329d9e3410459b82d725187394b, type: 3}
+  subSprite: {fileID: 21300000, guid: 412fb32611493124e851d0ddc9b3d43e, type: 3}
+  effectSprite: {fileID: 0}
+  color: {r: 1, g: 0.55, b: 0.15, a: 1}
+  finalColor: {r: 0.35, g: 0.7, b: 1, a: 1}
+  levels:
+  - description: "\uC6B4\uC11D 1\uAC1C \uB099\uD558"
+    damage: 30
+    cooldown: 5
+    count: 1
+    area: 1.6
+    speed: 0
+    duration: 0.7
+    range: 6.5
+    tickInterval: 0.35
+    special: 0
+    special2: 0
+  - description: "\uD53C\uD574\uB7C9 \uC99D\uAC00"
+    damage: 42
+    cooldown: 5
+    count: 1
+    area: 1.6
+    speed: 0
+    duration: 0.7
+    range: 6.5
+    tickInterval: 0.35
+    special: 0
+    special2: 0
+  - description: "\uC6B4\uC11D 3\uAC1C \uC21C\uCC28 \uB099\uD558"
+    damage: 42
+    cooldown: 5
+    count: 3
+    area: 1.6
+    speed: 0
+    duration: 0.7
+    range: 6.5
+    tickInterval: 0.35
+    special: 0
+    special2: 0
+  - description: "\uC6B4\uC11D \uD06C\uAE30 \uBC0F \uD3ED\uBC1C \uBC94\uC704 \uC99D\uAC00"
+    damage: 42
+    cooldown: 5
+    count: 3
+    area: 2.2
+    speed: 0
+    duration: 0.7
+    range: 6.5
+    tickInterval: 0.35
+    special: 0
+    special2: 0
+  - description: "\uD53C\uD574\uB7C9 \uCD94\uAC00 \uC99D\uAC00"
+    damage: 56
+    cooldown: 5
+    count: 3
+    area: 2.2
+    speed: 0
+    duration: 0.7
+    range: 6.5
+    tickInterval: 0.35
+    special: 0
+    special2: 0
+  - description: "\uC6B4\uC11D 5\uAC1C \uC21C\uCC28 \uB099\uD558"
+    damage: 56
+    cooldown: 5
+    count: 5
+    area: 2.2
+    speed: 0
+    duration: 0.7
+    range: 6.5
+    tickInterval: 0.35
+    special: 0
+    special2: 0
+  - description: "\uD478\uB978 \uD654\uC5FC \uC6B4\uC11D. \uCCB4\uAE09\xB7\uD3ED\uBC1C \uD654\uB825 \uAC15\uD654, \uD070 \uD654\uC5FC \uD30C\uB3D9"
+    damage: 78
+    cooldown: 5
+    count: 5
+    area: 2.8
+    speed: 0
+    duration: 0.7
+    range: 6.5
+    tickInterval: 0.35
+    special: 0
+    special2: 0
+  extras: []
+  hasEvolution: 0
+  evolutionName: 
+  evolutionDescription: 
+  evolutionIcon: {fileID: 0}
+  evolutionRequiredPassive: {fileID: 0}
+  evolutionStats:
+    description: 
+    damage: 0
+    cooldown: 0
+    count: 0
+    area: 0
+    speed: 0
+    duration: 0
+    range: 0
+    tickInterval: 0
+    special: 0
+    special2: 0

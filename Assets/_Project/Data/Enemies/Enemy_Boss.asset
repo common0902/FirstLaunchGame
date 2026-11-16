@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 999c00428e26da14ea1a4e4eab2ddf54, type: 3}
+  m_Name: Enemy_Boss
+  m_EditorClassIdentifier: Assembly-CSharp::ElementMage.EnemyData
+  displayName: "\uC2EC\uC5F0\uC758 \uAD70\uC8FC"
+  sprite: {fileID: 21300000, guid: 7f4c26709ac0a864096d60e5692a50a1, type: 3}
+  tint: {r: 1, g: 1, b: 1, a: 1}
+  maxHp: 12000
+  moveSpeed: 1.6
+  contactDamage: 20
+  radius: 1.25
+  visualWidth: 3.2
+  xp: 0
+  isBoss: 1

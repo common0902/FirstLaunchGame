@@ -1,0 +1,126 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e65154a53a0b682408a0f5f904924243, type: 3}
+  m_Name: Skill_WaterJet
+  m_EditorClassIdentifier: Assembly-CSharp::ElementMage.SkillData
+  id: 5
+  displayName: "\uC218\uC555 \uBD84\uCD9C"
+  element: 2
+  kind: 0
+  icon: {fileID: 21300000, guid: f3adf307814521d42a25e8e2c70788ef, type: 3}
+  summary: "\uBB34\uC791\uC704 \uBC29\uD5A5\uC73C\uB85C \uBB3C\uC904\uAE30\uB97C \uBD84\uC0AC\uD574 \uC801\uC744 \uBC00\uC5B4\uB0B8\uB2E4."
+  fieldGuide: "damage \uD2F1\uB2F9 \uD53C\uD574 / cooldown / count \uC904\uAE30 \uC218 / area \uBD84\uC0AC \uD3ED / range \uC0AC\uAC70\uB9AC / duration \uBD84\uC0AC \uC2DC\uAC04\ntickInterval / speed \uBC00\uC5B4\uB0B4\uB294 \uD798 / special \uD30C\uB3D9 \uD53C\uD574 \uBC30\uC728(0=\uC5C6\uC74C) / special2 \uD30C\uB3D9 \uAC04\uACA9\nextras: angleJitter \uC904\uAE30 \uAC01\uB3C4 \uD754\uB4E4\uB9BC, pulseTravelTime \uD30C\uB3D9\uC774 \uB05D\uAE4C\uC9C0 \uAC00\uB294 \uC2DC\uAC04"
+  mainSprite: {fileID: 21300000, guid: 3bab27e1b0548c349bc5cbe1f0186d97, type: 3}
+  subSprite: {fileID: 0}
+  effectSprite: {fileID: 21300000, guid: ab407d7631b70504d8a662f806afce9d, type: 3}
+  color: {r: 0.3, g: 0.85, b: 1, a: 1}
+  finalColor: {r: 0.3, g: 0.85, b: 1, a: 1}
+  levels:
+  - description: "\uBB34\uC791\uC704 \uBC29\uD5A5 \uC218\uC555 1\uAC1C"
+    damage: 4
+    cooldown: 4
+    count: 1
+    area: 1
+    speed: 3.5
+    duration: 2.5
+    range: 5
+    tickInterval: 0.25
+    special: 0
+    special2: 0
+  - description: "\uD53C\uD574\uB7C9 \uC99D\uAC00"
+    damage: 5.6
+    cooldown: 4
+    count: 1
+    area: 1
+    speed: 3.5
+    duration: 2.5
+    range: 5
+    tickInterval: 0.25
+    special: 0
+    special2: 0
+  - description: "\uBD84\uC0AC \uD3ED \uBC0F \uC0AC\uAC70\uB9AC \uC99D\uAC00"
+    damage: 5.6
+    cooldown: 4
+    count: 1
+    area: 1.4
+    speed: 3.5
+    duration: 2.5
+    range: 6.5
+    tickInterval: 0.25
+    special: 0
+    special2: 0
+  - description: "\uC218\uC555 2\uAC1C \uB3D9\uC2DC \uBD84\uCD9C"
+    damage: 5.6
+    cooldown: 4
+    count: 2
+    area: 1.4
+    speed: 3.5
+    duration: 2.5
+    range: 6.5
+    tickInterval: 0.25
+    special: 0
+    special2: 0
+  - description: "\uD53C\uD574\uB7C9 \uCD94\uAC00 \uC99D\uAC00"
+    damage: 7.6
+    cooldown: 4
+    count: 2
+    area: 1.4
+    speed: 3.5
+    duration: 2.5
+    range: 6.5
+    tickInterval: 0.25
+    special: 0
+    special2: 0
+  - description: "\uC218\uC555 3\uAC1C \uB3D9\uC2DC \uBD84\uCD9C"
+    damage: 7.6
+    cooldown: 4
+    count: 3
+    area: 1.4
+    speed: 3.5
+    duration: 2.5
+    range: 6.5
+    tickInterval: 0.25
+    special: 0
+    special2: 0
+  - description: "\uC555\uCD95 \uC218\uC555 \uD30C\uB3D9\uC774 \uBB3C\uC904\uAE30\uB97C \uB530\uB77C \uC9C4\uD589\uD558\uB294 \uB9E5\uB3D9 \uBD84\uC0AC"
+    damage: 7.6
+    cooldown: 4
+    count: 3
+    area: 1.4
+    speed: 3.5
+    duration: 2.5
+    range: 6.5
+    tickInterval: 0.25
+    special: 2.5
+    special2: 0.6
+  extras:
+  - key: angleJitter
+    value: 25
+  - key: pulseTravelTime
+    value: 0.35
+  hasEvolution: 0
+  evolutionName: 
+  evolutionDescription: 
+  evolutionIcon: {fileID: 0}
+  evolutionRequiredPassive: {fileID: 0}
+  evolutionStats:
+    description: 
+    damage: 0
+    cooldown: 0
+    count: 0
+    area: 0
+    speed: 0
+    duration: 0
+    range: 0
+    tickInterval: 0
+    special: 0
+    special2: 0

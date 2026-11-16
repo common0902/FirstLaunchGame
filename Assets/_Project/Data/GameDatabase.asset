@@ -1,0 +1,82 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05e27fea3b2e7794b9d3b81d510eb425, type: 3}
+  m_Name: GameDatabase
+  m_EditorClassIdentifier: Assembly-CSharp::ElementMage.GameDatabase
+  config: {fileID: 11400000, guid: 8e9f0df12ff8b2a45848ca63e5b1e078, type: 2}
+  skills:
+  - {fileID: 11400000, guid: e06792602e1356247822b7a58f6db178, type: 2}
+  - {fileID: 11400000, guid: 6f1a489eef57f064b9bd5eb8ff3d3fc1, type: 2}
+  - {fileID: 11400000, guid: 3549ee0fa6f208047beabec3ffd66e91, type: 2}
+  - {fileID: 11400000, guid: d012129b21f69f44ab354a355484c16a, type: 2}
+  - {fileID: 11400000, guid: 3c238591ef4bc6748a71c25d1a677dff, type: 2}
+  - {fileID: 11400000, guid: d67fedf7e9fda9e4b83a264fab4a9630, type: 2}
+  - {fileID: 11400000, guid: 0942aeffa78318341b9d6a8f00eabb41, type: 2}
+  - {fileID: 11400000, guid: bdb00a0bd9da5b741a3966dfc9b9c044, type: 2}
+  - {fileID: 11400000, guid: 6de3d43de8634414fa3fb7961970ad44, type: 2}
+  - {fileID: 11400000, guid: cdbbecf802f591048bc7edf9c21febdc, type: 2}
+  passives:
+  - {fileID: 11400000, guid: 3f46c2c194c573e4fb61150e732fa13e, type: 2}
+  - {fileID: 11400000, guid: 47832cfcf7f5c94448f55914c50591af, type: 2}
+  - {fileID: 11400000, guid: d23187c7e8ec1854c8e166d08f1f2a96, type: 2}
+  - {fileID: 11400000, guid: 55f9d3c52bac0054589981f228b2db68, type: 2}
+  spawnTable:
+  - enemy: {fileID: 11400000, guid: 8c0c0e60277eb244f83d7d5adecbd051, type: 2}
+    startTime: 0
+    endTime: 0
+    weight: 1
+  - enemy: {fileID: 11400000, guid: 7a6d69de4ef90d5488d9196b588dfddb, type: 2}
+    startTime: 60
+    endTime: 0
+    weight: 0.6
+  - enemy: {fileID: 11400000, guid: a87770e901728fe48b575eed32e41a18, type: 2}
+    startTime: 180
+    endTime: 0
+    weight: 0.35
+  boss: {fileID: 11400000, guid: 779c03c1034354543aa67c6ab40494a6, type: 2}
+  stages:
+  - {fileID: 11400000, guid: 115c60e24b5aa4147b07118396681b05, type: 2}
+  - {fileID: 11400000, guid: 7964c06af972358419a1ddc919d1439b, type: 2}
+  - {fileID: 11400000, guid: dbb084cc51e354d45b3e53dde1b9b07d, type: 2}
+  equipment:
+  - {fileID: 11400000, guid: 6390467d42f01f84794feac28503178f, type: 2}
+  - {fileID: 11400000, guid: 0262b60a1a3412b43b676cbc1f64d1c5, type: 2}
+  - {fileID: 11400000, guid: a63727d162e2e1645abbfb72fbce56ac, type: 2}
+  - {fileID: 11400000, guid: 64298508fde40b74abd607745157ba13, type: 2}
+  - {fileID: 11400000, guid: a6bf251a888354244b8cf70b2dafcb96, type: 2}
+  - {fileID: 11400000, guid: 6ca2c7489a0b4fd48909dc24f59bec15, type: 2}
+  - {fileID: 11400000, guid: d716410ea3231be47bd60d49281b7f30, type: 2}
+  - {fileID: 11400000, guid: 94826a050e719634b942e6528f293f5d, type: 2}
+  tabEquipIcon: {fileID: 21300000, guid: a872e933aa2721441b08dd51d45bb971, type: 3}
+  tabBattleIcon: {fileID: 21300000, guid: 48e34d26f838ff74e8472d59272f9106, type: 3}
+  tabCodexIcon: {fileID: 21300000, guid: f4092b442cabfbb4395e062f8d781232, type: 3}
+  lockIcon: {fileID: 21300000, guid: 8d8c2c627eb76f24fb2a490a8753aa42, type: 3}
+  dataVersion: 2
+  spriteMaterial: {fileID: 2100000, guid: 38527d82c74cfbb42bee9d5b8321a27b, type: 2}
+  player: {fileID: 21300000, guid: 2f9c9a3ca47f4864ebfcd4b4f90dcf8b, type: 3}
+  xpOrb: {fileID: 21300000, guid: 8f2ffd55ea009f247adce0c672435980, type: 3}
+  groundTile: {fileID: 21300000, guid: 6940e0adc160df145a0ce8c0da8daea4, type: 3}
+  circle: {fileID: 21300000, guid: 4001750252621284e89ca3b80ea3c726, type: 3}
+  softCircle: {fileID: 21300000, guid: 98218ed6bdd9d1b4a9a8a5191c1c504b, type: 3}
+  ring: {fileID: 21300000, guid: 1e9da7df937b95e46afbc75585f7ceb8, type: 3}
+  square: {fileID: 21300000, guid: a7c947b1d20d70447a4b788167e12566, type: 3}
+  burst: {fileID: 21300000, guid: d80f36fde3682ac4993c08c0f9cafb86, type: 3}
+  roundedRect: {fileID: 21300000, guid: 68d4943fdb823b747bf2647eed1eda8f, type: 3}
+  roundedOutline: {fileID: 21300000, guid: 5a5af3a054c599342a17a60c1e2f6a99, type: 3}
+  fireEmblem: {fileID: 21300000, guid: 41ad4f801987b8e4495773ba696d70f0, type: 3}
+  waterEmblem: {fileID: 21300000, guid: fabf806d8f3ce9548b20e1c927331e55, type: 3}
+  fireColor: {r: 1, g: 0.55, b: 0.15, a: 1}
+  blueFlameColor: {r: 0.35, g: 0.7, b: 1, a: 1}
+  waterColor: {r: 0.3, g: 0.85, b: 1, a: 1}
+  steamColor: {r: 0.92, g: 0.96, b: 1, a: 1}
+  burnTint: {r: 1, g: 0.7, b: 0.5, a: 1}
+  wetTint: {r: 0.6, g: 0.8, b: 1, a: 1}

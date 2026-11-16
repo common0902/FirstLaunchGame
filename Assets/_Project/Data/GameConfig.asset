@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccfb3e691324b544b83d36a78746b334, type: 3}
+  m_Name: GameConfig
+  m_EditorClassIdentifier: Assembly-CSharp::ElementMage.GameConfig
+  runDuration: 600
+  maxActiveSlots: 5
+  maxPassiveSlots: 5
+  ultimateUnlockLevel: 5
+  playerMaxHp: 100
+  playerMoveSpeed: 4.2
+  playerRadius: 0.35
+  playerHitInvincibleTime: 0.6
+  pickupRadius: 1.8
+  orbMagnetSpeed: 12
+  xpBase: 5
+  xpGrowthPerLevel: 3
+  maxXpOrbs: 250
+  cameraOrthoSize: 9
+  spawnIntervalStart: 0.7
+  spawnIntervalEnd: 0.1
+  maxEnemies: 220
+  spawnMargin: 1.5
+  enemyHpGrowthPerMinute: 0.35
+  despawnDistance: 20
+  maxContinuousForce: 6
+  maxEnemySpeed: 9
+  impulseDuration: 0.25
+  bossForceFactor: 0.3
+  burnDuration: 3
+  burnDps: 4
+  burnTickInterval: 0.5
+  wetDuration: 3
+  wetSlow: 0.1
+  bossWetSlowFactor: 0.5
+  reactionDamage: 18
+  reactionRadius: 1.5
+  reactionCooldown: 1
+  ownedUpgradeWeight: 2
+  newSkillWeight: 1
+  newSkillWeightWhenFew: 3
+  fewActivesThreshold: 2
+  passiveWeight: 1
+  ultimateWeight: 1.5
+  hiddenCardRevealTime: 0.5
+  bossArenaRadius: 4.6
+  bossSpawnRateMultiplier: 0
+  bossTelegraphTime: 1
+  bossDashSpeed: 14
+  bossDashDuration: 0.55
+  bossDashCooldown: 3.5
+  bossDashDamageMultiplier: 1.5
+  showDamageNumbers: 1
+  maxDamagePopups: 40

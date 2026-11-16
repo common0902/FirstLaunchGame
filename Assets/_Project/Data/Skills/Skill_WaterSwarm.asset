@@ -1,0 +1,122 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e65154a53a0b682408a0f5f904924243, type: 3}
+  m_Name: Skill_WaterSwarm
+  m_EditorClassIdentifier: Assembly-CSharp::ElementMage.SkillData
+  id: 4
+  displayName: "\uC218\uB958 \uAD70\uC9D1"
+  element: 2
+  kind: 0
+  icon: {fileID: 21300000, guid: 3b7d25cfb3bdf5244960a4e8e6585152, type: 3}
+  summary: "\uBB3C\uBC29\uC6B8 \uBB34\uB9AC\uAC00 \uACE1\uC120\uC73C\uB85C \uD5E4\uC5C4\uCE58\uBA70 \uC801\uC744 \uCC28\uB840\uB85C \uD0C0\uACA9\uD55C\uB2E4."
+  fieldGuide: "damage \uBB3C\uBC29\uC6B8 1\uAC1C\uB2F9 \uD53C\uD574 / count \uBB3C\uBC29\uC6B8 \uC218 / area \uAD70\uC9D1 \uBC18\uC9C0\uB984 / speed \uC774\uB3D9\uC18D\uB3C4\nrange \uD50C\uB808\uC774\uC5B4\uB85C\uBD80\uD130\uC758 \uCD94\uC801 \uD55C\uACC4 / tickInterval \uC801\uBCC4 \uC7AC\uD53C\uACA9 \uAC04\uACA9 / special \uC120\uD68C \uC18D\uB3C4(\uB3C4/\uCD08)"
+  mainSprite: {fileID: 21300000, guid: fd259474881b0a24e972153e8aa2eafb, type: 3}
+  subSprite: {fileID: 21300000, guid: 13d55a0baf19b6e43be64d263799dfda, type: 3}
+  effectSprite: {fileID: 0}
+  color: {r: 0.3, g: 0.85, b: 1, a: 1}
+  finalColor: {r: 0.3, g: 0.85, b: 1, a: 1}
+  levels:
+  - description: "\uBB3C\uBC29\uC6B8 3\uAC1C"
+    damage: 3
+    cooldown: 0
+    count: 3
+    area: 0.7
+    speed: 7
+    duration: 0
+    range: 8
+    tickInterval: 0.35
+    special: 300
+    special2: 0
+  - description: "\uD53C\uD574\uB7C9 \uC99D\uAC00"
+    damage: 4.2
+    cooldown: 0
+    count: 3
+    area: 0.7
+    speed: 7
+    duration: 0
+    range: 8
+    tickInterval: 0.35
+    special: 300
+    special2: 0
+  - description: "\uBB3C\uBC29\uC6B8 5\uAC1C"
+    damage: 4.2
+    cooldown: 0
+    count: 5
+    area: 0.8
+    speed: 7
+    duration: 0
+    range: 8
+    tickInterval: 0.35
+    special: 300
+    special2: 0
+  - description: "\uAD70\uC9D1 \uC774\uB3D9\uC18D\uB3C4 \uC99D\uAC00"
+    damage: 4.2
+    cooldown: 0
+    count: 5
+    area: 0.8
+    speed: 9.5
+    duration: 0
+    range: 8
+    tickInterval: 0.35
+    special: 360
+    special2: 0
+  - description: "\uD53C\uD574\uB7C9 \uCD94\uAC00 \uC99D\uAC00"
+    damage: 5.6
+    cooldown: 0
+    count: 5
+    area: 0.8
+    speed: 9.5
+    duration: 0
+    range: 8
+    tickInterval: 0.35
+    special: 360
+    special2: 0
+  - description: "\uBB3C\uBC29\uC6B8 7\uAC1C"
+    damage: 5.6
+    cooldown: 0
+    count: 7
+    area: 0.9
+    speed: 9.5
+    duration: 0
+    range: 8
+    tickInterval: 0.35
+    special: 360
+    special2: 0
+  - description: "\uB0A0\uCE74\uB86D\uACE0 \uAE38\uCB49\uD55C \uC218\uB958. \uC774\uB3D9\uC18D\uB3C4\xB7\uACF5\uACA9\uB825 \uAC15\uD654"
+    damage: 7.2
+    cooldown: 0
+    count: 7
+    area: 1
+    speed: 12.5
+    duration: 0
+    range: 8
+    tickInterval: 0.3
+    special: 420
+    special2: 0
+  extras: []
+  hasEvolution: 0
+  evolutionName: 
+  evolutionDescription: 
+  evolutionIcon: {fileID: 0}
+  evolutionRequiredPassive: {fileID: 0}
+  evolutionStats:
+    description: 
+    damage: 0
+    cooldown: 0
+    count: 0
+    area: 0
+    speed: 0
+    duration: 0
+    range: 0
+    tickInterval: 0
+    special: 0
+    special2: 0

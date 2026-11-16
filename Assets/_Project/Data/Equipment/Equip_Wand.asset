@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b35934e8bc8bd9c40a8ddc5e7e90f760, type: 3}
+  m_Name: Equip_Wand
+  m_EditorClassIdentifier: Assembly-CSharp::ElementMage.EquipmentData
+  displayName: "\uBD88\uC528 \uC644\uB4DC"
+  slot: 0
+  icon: {fileID: 21300000, guid: 5ded23070aea8ac48a20e9512c33834f, type: 3}
+  stat: 2
+  value: 0.08

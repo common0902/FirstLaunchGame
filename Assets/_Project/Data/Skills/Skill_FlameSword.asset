@@ -1,0 +1,124 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e65154a53a0b682408a0f5f904924243, type: 3}
+  m_Name: Skill_FlameSword
+  m_EditorClassIdentifier: Assembly-CSharp::ElementMage.SkillData
+  id: 1
+  displayName: "\uD654\uC5FC\uAC80"
+  element: 1
+  kind: 0
+  icon: {fileID: 21300000, guid: 09dba9cb5d84a8840906e0b51a39407d, type: 3}
+  summary: "\uC774\uB3D9 \uBC29\uD5A5 \uC804\uBC29\uC744 \uD654\uC5FC\uAC80\uC73C\uB85C \uD06C\uAC8C \uBCA4\uB2E4."
+  fieldGuide: "damage \uCC38\uACA9 1\uD68C \uD53C\uD574 / cooldown / count \uC5F0\uC18D \uBCA0\uAE30 \uD69F\uC218 / area \uAC80 \uC0AC\uAC70\uB9AC(\uBC18\uC9C0\uB984)\nspeed \uAC80\uAE30 \uC18D\uB3C4 / range \uAC80\uAE30 \uC0AC\uAC70\uB9AC / special \uAC80\uAE30 \uD53C\uD574 \uBC30\uC728(0=\uAC80\uAE30 \uC5C6\uC74C) / special2 \uCC38\uACA9 \uAC01\uB3C4(360=\uAC80\uBB34)\nextras: comboInterval \uC5F0\uC18D \uBCA0\uAE30 \uAC04\uACA9"
+  mainSprite: {fileID: 21300000, guid: 2a0d275d0d06d6e48ae20f44beb1bc08, type: 3}
+  subSprite: {fileID: 0}
+  effectSprite: {fileID: 21300000, guid: 940e3c964d4cdb44c81865fd46aab4ae, type: 3}
+  color: {r: 1, g: 0.55, b: 0.15, a: 1}
+  finalColor: {r: 0.35, g: 0.7, b: 1, a: 1}
+  levels:
+  - description: "\uC804\uBC29 \uD654\uC5FC\uAC80 \uCC38\uACA9"
+    damage: 14
+    cooldown: 1.6
+    count: 1
+    area: 2.2
+    speed: 12
+    duration: 0
+    range: 7
+    tickInterval: 0
+    special: 0
+    special2: 130
+  - description: "\uD53C\uD574\uB7C9 \uC99D\uAC00"
+    damage: 20
+    cooldown: 1.6
+    count: 1
+    area: 2.2
+    speed: 12
+    duration: 0
+    range: 7
+    tickInterval: 0
+    special: 0
+    special2: 130
+  - description: "\uD654\uC5FC \uAC80\uAE30 \uBC1C\uC0AC"
+    damage: 20
+    cooldown: 1.6
+    count: 1
+    area: 2.2
+    speed: 12
+    duration: 0
+    range: 7
+    tickInterval: 0
+    special: 0.6
+    special2: 130
+  - description: "\uAC80 \uD06C\uAE30 \uBC0F \uC0AC\uAC70\uB9AC \uC99D\uAC00"
+    damage: 20
+    cooldown: 1.6
+    count: 1
+    area: 3
+    speed: 12
+    duration: 0
+    range: 9
+    tickInterval: 0
+    special: 0.6
+    special2: 130
+  - description: "2\uC5F0\uC18D \uBCA0\uAE30. \uB450 \uCC38\uACA9 \uBAA8\uB450 \uAC80\uAE30 \uBC1C\uC0AC"
+    damage: 14
+    cooldown: 1.6
+    count: 2
+    area: 3
+    speed: 12
+    duration: 0
+    range: 9
+    tickInterval: 0
+    special: 0.6
+    special2: 130
+  - description: "\uD53C\uD574\uB7C9 \uCD94\uAC00 \uC99D\uAC00"
+    damage: 19
+    cooldown: 1.6
+    count: 2
+    area: 3
+    speed: 12
+    duration: 0
+    range: 9
+    tickInterval: 0
+    special: 0.6
+    special2: 130
+  - description: "\uD478\uB978 \uD654\uC5FC\uC758 360\uB3C4 \uAC80\uBB34"
+    damage: 22
+    cooldown: 1.6
+    count: 2
+    area: 3.2
+    speed: 12
+    duration: 0
+    range: 9
+    tickInterval: 0
+    special: 0.6
+    special2: 360
+  extras:
+  - key: comboInterval
+    value: 0.22
+  hasEvolution: 0
+  evolutionName: 
+  evolutionDescription: 
+  evolutionIcon: {fileID: 0}
+  evolutionRequiredPassive: {fileID: 0}
+  evolutionStats:
+    description: 
+    damage: 0
+    cooldown: 0
+    count: 0
+    area: 0
+    speed: 0
+    duration: 0
+    range: 0
+    tickInterval: 0
+    special: 0
+    special2: 0

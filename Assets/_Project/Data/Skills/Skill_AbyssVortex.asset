@@ -1,0 +1,110 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e65154a53a0b682408a0f5f904924243, type: 3}
+  m_Name: Skill_AbyssVortex
+  m_EditorClassIdentifier: Assembly-CSharp::ElementMage.SkillData
+  id: 9
+  displayName: "\uC2EC\uD574 \uC18C\uC6A9\uB3CC\uC774"
+  element: 2
+  kind: 1
+  icon: {fileID: 21300000, guid: e4412c3663615094a9a15c3edc71298f, type: 3}
+  summary: "\uC801\uC744 \uB098\uC120\uD615\uC73C\uB85C \uC911\uC2EC\uC5D0 \uB04C\uC5B4\uB2F9\uAE30\uB294 \uC18C\uC6A9\uB3CC\uC774. \uC911\uC2EC\uC5D0 \uAC00\uAE4C\uC6B8\uC218\uB85D \uC790\uC8FC \uD0C0\uACA9\uD55C\uB2E4."
+  fieldGuide: "damage \uD0C0\uACA9\uB2F9 \uD53C\uD574 / cooldown / area \uBC18\uC9C0\uB984 / speed \uD761\uC785\uB825 / duration / tickInterval \uAC00\uC7A5\uC790\uB9AC \uD0C0\uACA9 \uAC04\uACA9 / range \uD0D0\uC0C9 \uBC18\uACBD\nspecial \uC2EC\uC5F0\uC758 \uBD95\uAD34 \uAE30\uBCF8 \uD53C\uD574(0=\uC5C6\uC74C) / special2 \uBD95\uAD34 \uC2DC \uC801 1\uB9C8\uB9AC\uB2F9 \uD53C\uD574 \uC99D\uAC00\uC728\nextras: minTickInterval \uD0C0\uACA9 \uC8FC\uAE30 \uD558\uD55C, coreRadiusRatio \uC911\uC2EC\uBD80 \uD06C\uAE30 \uBE44\uC728, tangentialSpeed \uD68C\uC804 \uD798, collapseEnemyCap \uBD95\uAD34 \uD53C\uD574 \uC801 \uC218 \uC0C1\uD55C, scatterSpeed \uD769\uBFCC\uB9AC\uB294 \uC18D\uB3C4"
+  mainSprite: {fileID: 21300000, guid: f29ee12daaff73644ba5fc96eb9619e0, type: 3}
+  subSprite: {fileID: 0}
+  effectSprite: {fileID: 0}
+  color: {r: 0.3, g: 0.85, b: 1, a: 1}
+  finalColor: {r: 0.3, g: 0.85, b: 1, a: 1}
+  levels:
+  - description: "\uAE30\uBCF8 \uC18C\uC6A9\uB3CC\uC774 (\uB098\uC120 \uD761\uC785)"
+    damage: 5
+    cooldown: 14
+    count: 1
+    area: 3
+    speed: 2.5
+    duration: 6
+    range: 8
+    tickInterval: 0.8
+    special: 0
+    special2: 0
+  - description: "\uBC94\uC704 \uC99D\uAC00"
+    damage: 5
+    cooldown: 14
+    count: 1
+    area: 4
+    speed: 2.5
+    duration: 6
+    range: 8
+    tickInterval: 0.8
+    special: 0
+    special2: 0
+  - description: "\uAE30\uBCF8 \uD53C\uD574 \uC99D\uAC00"
+    damage: 7
+    cooldown: 14
+    count: 1
+    area: 4
+    speed: 2.5
+    duration: 6
+    range: 8
+    tickInterval: 0.8
+    special: 0
+    special2: 0
+  - description: "\uD761\uC785\uB825 \uC99D\uAC00"
+    damage: 7
+    cooldown: 14
+    count: 1
+    area: 4
+    speed: 4
+    duration: 6
+    range: 8
+    tickInterval: 0.8
+    special: 0
+    special2: 0
+  - description: "\uC2EC\uC5F0\uC758 \uBD95\uAD34: \uC885\uB8CC \uC2DC \uC911\uC2EC\uBD80 \uD3ED\uBC1C, \uB04C\uB824\uC628 \uC801\uC774 \uB9CE\uC744\uC218\uB85D \uAC15\uD574\uC9C0\uACE0 \uC801\uC744 \uD769\uBFCC\uB9B0\uB2E4"
+    damage: 7
+    cooldown: 14
+    count: 1
+    area: 4
+    speed: 4
+    duration: 6
+    range: 8
+    tickInterval: 0.8
+    special: 40
+    special2: 0.1
+  extras:
+  - key: minTickInterval
+    value: 0.2
+  - key: coreRadiusRatio
+    value: 0.3
+  - key: tangentialSpeed
+    value: 3
+  - key: collapseEnemyCap
+    value: 15
+  - key: scatterSpeed
+    value: 9
+  hasEvolution: 0
+  evolutionName: 
+  evolutionDescription: 
+  evolutionIcon: {fileID: 0}
+  evolutionRequiredPassive: {fileID: 0}
+  evolutionStats:
+    description: 
+    damage: 0
+    cooldown: 0
+    count: 0
+    area: 0
+    speed: 0
+    duration: 0
+    range: 0
+    tickInterval: 0
+    special: 0
+    special2: 0
