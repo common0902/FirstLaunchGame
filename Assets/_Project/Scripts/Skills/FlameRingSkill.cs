@@ -102,7 +102,7 @@ namespace ElementMage
                     if (killed && s.special2 > 0f && now >= ring.blueReadyTime)
                     {
                         ring.blueTimer = s.duration;
-                        // TODO(미정): Lv.7 재발동 대기 시간. 기본값 0 (SkillData extras의 blueCooldown)
+                        // Lv.7 재발동 대기 시간: 0으로 확정 (SkillData extras의 blueCooldown으로 조정 가능)
                         ring.blueReadyTime = now + blueCooldown;
                     }
                 }

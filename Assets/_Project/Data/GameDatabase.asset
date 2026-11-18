@@ -60,10 +60,15 @@ MonoBehaviour:
   tabBattleIcon: {fileID: 21300000, guid: 48e34d26f838ff74e8472d59272f9106, type: 3}
   tabCodexIcon: {fileID: 21300000, guid: f4092b442cabfbb4395e062f8d781232, type: 3}
   lockIcon: {fileID: 21300000, guid: 8d8c2c627eb76f24fb2a490a8753aa42, type: 3}
-  dataVersion: 2
+  healIcon: {fileID: 21300000, guid: 8a527a15f07b3c54eaf5cbf0ac5a2f51, type: 3}
+  dataVersion: 4
   spriteMaterial: {fileID: 2100000, guid: 38527d82c74cfbb42bee9d5b8321a27b, type: 2}
   player: {fileID: 21300000, guid: 2f9c9a3ca47f4864ebfcd4b4f90dcf8b, type: 3}
   xpOrb: {fileID: 21300000, guid: 8f2ffd55ea009f247adce0c672435980, type: 3}
+  xpOrbMid: {fileID: 21300000, guid: 54ebfdcfe7dabef47bfd5cd3923bf4e4, type: 3}
+  xpOrbLarge: {fileID: 21300000, guid: 433c976749cc6974abebbc53ff22bbb1, type: 3}
+  magnet: {fileID: 21300000, guid: 2d50ffbe3c9a23b4aaa726721f5cc118, type: 3}
+  pickupArrow: {fileID: 21300000, guid: c88009faba81a644e8c904353c15e750, type: 3}
   groundTile: {fileID: 21300000, guid: 6940e0adc160df145a0ce8c0da8daea4, type: 3}
   circle: {fileID: 21300000, guid: 4001750252621284e89ca3b80ea3c726, type: 3}
   softCircle: {fileID: 21300000, guid: 98218ed6bdd9d1b4a9a8a5191c1c504b, type: 3}

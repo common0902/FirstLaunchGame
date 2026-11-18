@@ -23,7 +23,21 @@ namespace ElementMage.EditorTools
         internal const string IconDir = Root + "/Art/Icons";
         const string DataDir = Root + "/Data";
         /// <summary>데이터 구성이 바뀔 때마다 올린다. 에디터가 이 번호를 보고 빠진 데이터를 자동으로 채운다.</summary>
-        public const int DataVersion = 2;
+        public const int DataVersion = 4;
+
+        /// <summary>
+        /// 이미 있는 에셋에 새 버전의 기본값을 넣는다 (사용자가 바꾼 다른 수치는 건드리지 않는다).
+        /// v3: 골렘 오브 드롭 확률 0.7
+        /// </summary>
+        public static void Migrate(int fromVersion)
+        {
+            if (fromVersion < 3)
+            {
+                var golem = AssetDatabase.LoadAssetAtPath<EnemyData>(DataDir + "/Enemies/Enemy_Golem.asset");
+                if (golem != null) { golem.orbDropChance = 0.7f; EditorUtility.SetDirty(golem); }
+            }
+            AssetDatabase.SaveAssets();
+        }
 
         [MenuItem("ElementMage/프로젝트 구성 다시 만들기 (수정한 수치 유지)")]
         static void BuildKeep()
@@ -220,7 +234,7 @@ namespace ElementMage.EditorTools
             {
                 s.id = SkillId.FlameRing; s.displayName = "화염 고리"; s.element = Element.Fire; s.kind = SkillKind.Normal;
                 s.summary = "화염 고리가 화면 안을 돌아다니며 경계에서 튕긴다. 적을 관통한다.";
-                s.fieldGuide = "damage 1회 피해 / count 고리 수 / area 고리 반지름 / speed 이동속도 / tickInterval 적별 재피격 간격\nspecial 반사 팽창 배율(0=없음) / special2 푸른 화염 속도·피해 배율(0=없음) / duration 푸른 화염 지속\nextras: expandDuration 팽창 시간, blueCooldown Lv.7 재발동 대기(미정, 기본 0), boundsScale 전투 영역 크기(화면 대비)";
+                s.fieldGuide = "damage 1회 피해 / count 고리 수 / area 고리 반지름 / speed 이동속도 / tickInterval 적별 재피격 간격\nspecial 반사 팽창 배율(0=없음) / special2 푸른 화염 속도·피해 배율(0=없음) / duration 푸른 화염 지속\nextras: expandDuration 팽창 시간, blueCooldown Lv.7 재발동 대기(0으로 확정), boundsScale 전투 영역 크기(화면 대비)";
                 s.icon = S("icon_flame_ring"); s.mainSprite = S("flame_ring"); s.color = fire; s.finalColor = blue;
                 s.levels = new[]
                 {
@@ -406,6 +420,7 @@ namespace ElementMage.EditorTools
             db.tabBattleIcon = S("tab_battle");
             db.tabCodexIcon = S("tab_codex");
             db.lockIcon = S("icon_lock");
+            db.healIcon = S("icon_heal");
             db.dataVersion = DataVersion;
             if (dbCreated || overwrite || db.spawnTable == null || db.spawnTable.Count == 0)
             {
@@ -422,6 +437,10 @@ namespace ElementMage.EditorTools
             db.spriteMaterial = material;
             db.player = S("player");
             db.xpOrb = S("xp_orb");
+            db.xpOrbMid = S("xp_orb_mid");
+            db.xpOrbLarge = S("xp_orb_large");
+            db.magnet = S("magnet");
+            db.pickupArrow = S("pickup_arrow");
             db.groundTile = S("ground");
             db.circle = S("circle");
             db.softCircle = S("soft_circle");
@@ -490,6 +509,8 @@ namespace ElementMage.EditorTools
             {
                 e.displayName = name; e.sprite = S(sprite); e.tint = Color.white; e.maxHp = hp; e.moveSpeed = speed;
                 e.contactDamage = damage; e.radius = radius; e.visualWidth = width; e.xp = xp; e.isBoss = isBoss;
+                // 튼튼한 적일수록 오브가 잘 나온다
+                e.orbDropChance = isBoss ? 0f : xp >= 5 ? 0.7f : 0.35f;
                 EditorUtility.SetDirty(e);
             }
             return e;
@@ -571,10 +592,12 @@ namespace ElementMage.EditorTools
             if (hasData)
             {
                 var db = AssetDatabase.LoadAssetAtPath<GameDatabase>(ProjectBuilder.DatabasePath);
-                if (db != null && db.dataVersion < ProjectBuilder.DataVersion && File.Exists(ProjectBuilder.IconDir + "/tab_battle.png"))
+                if (db != null && db.dataVersion < ProjectBuilder.DataVersion && File.Exists(ProjectBuilder.IconDir + "/icon_heal.png"))
                 {
+                    int before = db.dataVersion;
                     ProjectBuilder.Build(false);
-                    Debug.Log("[ElementMage] 데이터 구성을 갱신했습니다 (로비·스테이지·장비 추가).");
+                    ProjectBuilder.Migrate(before);
+                    Debug.Log("[ElementMage] 데이터 구성을 갱신했습니다 (로비·스테이지·장비·경험치 오브·회복 카드).");
                 }
             }
             if (hasData && inBuildList) return;

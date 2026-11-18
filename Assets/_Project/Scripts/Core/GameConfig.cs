@@ -28,7 +28,32 @@ namespace ElementMage
         [Header("경험치 (다음 레벨 필요량 = base + growth × (레벨-1))")]
         public float xpBase = 5f;
         public float xpGrowthPerLevel = 3f;
+        [Tooltip("오브 개수 상한. 넘으면 새 오브를 만들지 않고 가장 가까운 오브에 경험치를 합친다")]
         public int maxXpOrbs = 250;
+
+        [Header("경험치 수입 (목표: 10분에 레벨 45 — 테스트 값)")]
+        [Tooltip("처치 즉시 받는 경험치 = 적 경험치 × 이 값 (아주 적은 기본 수입)")]
+        public float killXpRatio = 0.2f;
+        [Tooltip("오브 등급별 확률 (소·중·대). 합이 1이 아니어도 비율로 계산한다")]
+        public float[] orbTierChances = { 0.8f, 0.17f, 0.03f };
+        [Tooltip("오브 등급별 경험치 (소·중·대). 적 종류와 무관한 고정값")]
+        public int[] orbTierValues = { 2, 6, 25 };
+        [Tooltip("오브 등급별 표시 크기 (소·중·대, 월드 단위)")]
+        public float[] orbTierSizes = { 0.38f, 0.52f, 0.72f };
+
+        [Header("바닥 오브")]
+        [Tooltip("바닥 오브 묶음이 생기는 간격(초). 0이면 생기지 않는다")]
+        public float floorOrbInterval = 40f;
+        [Tooltip("첫 묶음이 생기는 시간(초)")]
+        public float floorOrbFirstTime = 30f;
+        public int floorOrbMidMin = 2;
+        public int floorOrbMidMax = 3;
+        [Tooltip("묶음에 대 오브 1개가 섞일 확률")]
+        [Range(0f, 1f)] public float floorOrbLargeChance = 0.35f;
+        [Tooltip("묶음 대신 자석(화면의 오브를 전부 끌어옴)이 나올 확률")]
+        [Range(0f, 1f)] public float floorMagnetChance = 0.15f;
+        [Tooltip("화면 가장자리 바깥으로 이만큼 떨어진 곳에 생성")]
+        public float floorOrbMargin = 1.2f;
 
         [Header("카메라")]
         [Tooltip("세로 화면 기준 직교 카메라 크기(화면 절반 높이)")]
@@ -80,6 +105,8 @@ namespace ElementMage
         public int fewActivesThreshold = 2;
         public float passiveWeight = 1f;
         public float ultimateWeight = 1.5f;
+        [Tooltip("레벨업 후보가 0개일 때 나오는 체력 회복 카드의 회복량 (최대 체력 대비)")]
+        [Range(0f, 1f)] public float fallbackHealRatio = 0.3f;
         [Tooltip("히든 4번째 카드 등장 연출 시간. 이 동안 모든 카드 입력 잠금")]
         public float hiddenCardRevealTime = 0.5f;
 

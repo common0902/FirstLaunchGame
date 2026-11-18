@@ -35,6 +35,8 @@ namespace ElementMage
         public Sprite tabBattleIcon;
         public Sprite tabCodexIcon;
         public Sprite lockIcon;
+        [Tooltip("레벨업 후보가 0개일 때의 체력 회복 카드 아이콘")]
+        public Sprite healIcon;
         [Tooltip("에디터의 자동 구성이 데이터를 갱신해야 하는지 판단하는 번호")]
         public int dataVersion;
 
@@ -42,6 +44,10 @@ namespace ElementMage
         public Material spriteMaterial;
         public Sprite player;
         public Sprite xpOrb;
+        [Tooltip("중급 경험치 오브")] public Sprite xpOrbMid;
+        [Tooltip("대급 경험치 오브")] public Sprite xpOrbLarge;
+        [Tooltip("자석 (화면의 오브를 전부 끌어옴)")] public Sprite magnet;
+        [Tooltip("화면 밖 바닥 오브 방향 화살표")] public Sprite pickupArrow;
         public Sprite groundTile;
         [Tooltip("흰색 원 (틴트용)")] public Sprite circle;
         [Tooltip("가장자리가 부드러운 원 (틴트용)")] public Sprite softCircle;

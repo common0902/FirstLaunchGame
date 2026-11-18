@@ -172,6 +172,9 @@ namespace ElementMage
                     {
                         bossSeen = true;
                         Capture("boss_arena");
+                        log.AppendLine("boss_start level=" + gm.Player.Experience.Level + " kills=" + gm.Kills +
+                                       " xpKills=" + Mathf.RoundToInt(XpOrb.XpFromKills) + " xpOrbs=" + Mathf.RoundToInt(XpOrb.XpFromOrbs) +
+                                       " magnets=" + XpOrb.MagnetsPicked);
                     }
                     if (restarted)
                     {
@@ -216,7 +219,11 @@ namespace ElementMage
                 float sqr = d.sqrMagnitude;
                 if (sqr < 9f && sqr > 0.0001f) away += d / sqr;
             }
-            Vector2 dir = away.sqrMagnitude > 0.01f ? (away.normalized * 0.8f + wanderDir * 0.2f).normalized : wanderDir;
+            // 사람처럼 근처 오브를 주우러 간다 (위험할수록 회피를 우선)
+            Vector2 seek = wanderDir;
+            if (XpOrb.TryNearest(pos, 14f, out Vector2 orbPos) && (orbPos - pos).sqrMagnitude > 0.01f)
+                seek = (orbPos - pos).normalized;
+            Vector2 dir = away.sqrMagnitude > 0.01f ? (away.normalized * 0.75f + seek * 0.25f).normalized : seek;
             gm.Player.DebugMoveInput = dir;
         }
 

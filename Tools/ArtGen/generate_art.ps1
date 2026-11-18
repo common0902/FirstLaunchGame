@@ -262,6 +262,55 @@ Fill-Poly $g (Col 255 170 255 232) @(32, 11, 49, 32, 32, 32, 15, 32)
 Fill-Poly $g $white @(32, 15, 38, 26, 32, 28, 27, 26)
 Save-Canvas $c $spr 'xp_orb'
 
+# 중급 경험치 오브 (파란 보석, 면이 더 많다)
+$c = New-Canvas 96 96; $g = $c.G
+Fill-Glow $g 48 48 47 (Col 190 120 170 255) (Col 0 40 90 255)
+Fill-Poly $g (Col 255 18 42 120) @(48, 8, 80, 34, 70, 78, 26, 78, 16, 34)
+Fill-Poly $g (Col 255 60 120 245) @(48, 14, 74, 36, 66, 72, 30, 72, 22, 36)
+Fill-Poly $g (Col 255 140 190 255) @(48, 14, 74, 36, 48, 44, 22, 36)
+Fill-Poly $g (Col 255 40 90 210) @(48, 44, 66, 72, 30, 72)
+Fill-Poly $g $white @(42, 22, 52, 22, 56, 30, 38, 30)
+Fill-Circle $g (Col 230 255 255 255) 64 28 3
+Save-Canvas $c $spr 'xp_orb_mid'
+
+# 대급 경험치 오브 (보라 결정 + 금테, 반짝임)
+$c = New-Canvas 128 128; $g = $c.G
+Fill-Glow $g 64 64 63 (Col 210 210 140 255) (Col 0 120 40 200)
+Fill-Poly $g (Col 255 255 200 80) @(64, 6, 102, 44, 90, 104, 38, 104, 26, 44)
+Fill-Poly $g (Col 255 70 20 110) @(64, 12, 96, 46, 85, 98, 43, 98, 32, 46)
+Fill-Poly $g (Col 255 165 80 235) @(64, 18, 90, 47, 80, 92, 48, 92, 38, 47)
+Fill-Poly $g (Col 255 220 170 255) @(64, 18, 90, 47, 64, 58, 38, 47)
+Fill-Poly $g (Col 255 120 50 200) @(64, 58, 80, 92, 48, 92)
+Fill-Poly $g $white @(57, 28, 70, 28, 76, 40, 50, 40)
+Fill-Poly $g (Col 255 255 255 255) (Star-Points 98 22 4 13 3)
+Fill-Poly $g (Col 230 255 240 200) (Star-Points 28 86 4 9 2)
+Save-Canvas $c $spr 'xp_orb_large'
+
+# 자석 (빨간 말굽 자석 + 은색 끝)
+$c = New-Canvas 128 128; $g = $c.G
+Fill-Glow $g 64 64 63 (Col 150 255 220 120) (Col 0 255 160 60)
+$pen = New-Pen (Col 255 120 20 30) 34
+$g.DrawArc($pen, 26, 30, 76, 76, 0, 180); $pen.Dispose()
+Fill-RoundRect $g (Col 255 120 20 30) 9 28 34 42 6
+Fill-RoundRect $g (Col 255 120 20 30) 85 28 34 42 6
+$pen = New-Pen (Col 255 235 60 55) 24
+$g.DrawArc($pen, 26, 30, 76, 76, 0, 180); $pen.Dispose()
+Fill-RoundRect $g (Col 255 235 60 55) 14 30 24 40 5
+Fill-RoundRect $g (Col 255 235 60 55) 90 30 24 40 5
+Fill-RoundRect $g (Col 255 120 20 30) 9 14 34 22 5
+Fill-RoundRect $g (Col 255 120 20 30) 85 14 34 22 5
+Fill-RoundRect $g (Col 255 225 230 240) 13 17 26 16 4
+Fill-RoundRect $g (Col 255 225 230 240) 89 17 26 16 4
+$pen = New-Pen (Col 200 255 160 150) 5
+$g.DrawArc($pen, 34, 38, 60, 60, 20, 60); $pen.Dispose()
+Save-Canvas $c $spr 'magnet'
+
+# 바닥 오브 방향 화살표 (오른쪽을 가리킨다, 흰색 틴트용)
+$c = New-Canvas 96 96; $g = $c.G
+Fill-Poly $g (Col 255 30 20 50) @(90, 48, 18, 10, 34, 48, 18, 86)
+Fill-Poly $g $white @(80, 48, 24, 18, 38, 48, 24, 78)
+Save-Canvas $c $spr 'pickup_arrow'
+
 # 바닥 타일 (이어 붙여도 끊기지 않게 가장자리에 걸친 무늬는 반대편에도 그린다)
 $c = New-Canvas 512 512; $g = $c.G
 $g.Clear((Col 255 40 62 56))
@@ -646,3 +695,17 @@ Fill-Circle $g $outline 64 80 9; Fill-RoundRect $g $outline 60 82 8 20 3
 Save-Canvas $c $ico 'icon_lock'
 
 Write-Output ("lobby icons done: " + (Get-ChildItem $ico -Filter *.png).Count + " icons")
+
+# 체력 회복 카드 아이콘 (초록 바탕 + 하트 + 십자)
+$c = New-Icon (Col 255 52 150 78) (Col 255 20 70 40) (Col 255 150 255 170); $g = $c.G
+Fill-Glow $g 64 66 52 (Col 120 200 255 200) (Col 0 120 255 140)
+$heart = @(64, 108, 22, 66, 18, 44, 30, 26, 48, 22, 64, 36, 80, 22, 98, 26, 110, 44, 106, 66)
+Fill-Curve $g $outline $heart 0.35
+Push $g 64 66 0 0.86; Push $g -64 -66
+Fill-Curve $g (Col 255 240 80 90) $heart 0.35
+Pop $g; Pop $g
+Fill-Ellipse $g (Col 200 255 190 190) 44 46 9 6
+Fill-RoundRect $g $white 57 50 14 36 4
+Fill-RoundRect $g $white 46 61 36 14 4
+Save-Canvas $c $ico 'icon_heal'
+Write-Output 'heal icon done'

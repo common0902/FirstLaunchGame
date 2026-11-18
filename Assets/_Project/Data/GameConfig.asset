@@ -25,6 +25,23 @@ MonoBehaviour:
   xpBase: 5
   xpGrowthPerLevel: 3
   maxXpOrbs: 250
+  killXpRatio: 0.2
+  orbTierChances:
+  - 0.8
+  - 0.17
+  - 0.03
+  orbTierValues: 020000000600000019000000i
+  orbTierSizes:
+  - 0.38
+  - 0.52
+  - 0.72
+  floorOrbInterval: 40
+  floorOrbFirstTime: 30
+  floorOrbMidMin: 2
+  floorOrbMidMax: 3
+  floorOrbLargeChance: 0.35
+  floorMagnetChance: 0.15
+  floorOrbMargin: 1.2
   cameraOrthoSize: 9
   spawnIntervalStart: 0.7
   spawnIntervalEnd: 0.1
@@ -51,6 +68,7 @@ MonoBehaviour:
   fewActivesThreshold: 2
   passiveWeight: 1
   ultimateWeight: 1.5
+  fallbackHealRatio: 0.3
   hiddenCardRevealTime: 0.5
   bossArenaRadius: 4.6
   bossSpawnRateMultiplier: 0

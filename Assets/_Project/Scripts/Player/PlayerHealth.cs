@@ -31,6 +31,18 @@ namespace ElementMage
             Hp = MaxHp;
         }
 
+        public void Heal(float amount)
+        {
+            if (IsDead || amount <= 0f) return;
+            Hp = Mathf.Min(MaxHp, Hp + amount);
+            Vector2 pos = transform.position;
+            Fx.Glow(pos, 2.4f, new Color(0.4f, 1f, 0.5f, 0.55f), 0.4f);
+            Fx.Shockwave(pos, 1.6f, new Color(0.5f, 1f, 0.6f, 0.7f), 0.4f);
+            for (int i = 0; i < 10; i++)
+                Vfx.Glow(pos + Random.insideUnitCircle * 0.6f, new Vector2(Random.Range(-0.4f, 0.4f), Random.Range(1.5f, 3f)),
+                    Random.Range(0.12f, 0.22f), Random.Range(0.5f, 0.8f), new Color(0.5f, 1f, 0.6f, 0.9f));
+        }
+
         public void TakeDamage(float amount)
         {
             if (IsDead || invincibleTimer > 0f || amount <= 0f) return;

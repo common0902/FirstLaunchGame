@@ -85,6 +85,7 @@ namespace ElementMage
 
             Spawner = new GameObject("EnemySpawner").AddComponent<EnemySpawner>();
             Spawner.Init(this);
+            new GameObject("FloorOrbSpawner").AddComponent<FloorOrbSpawner>().Init(this);
 
             levelUps = new LevelUpManager(this);
             BuildUI();
@@ -171,12 +172,12 @@ namespace ElementMage
 
         // ---------- 레벨업 ----------
 
-        /// <returns>선택 창을 열었으면 true. 후보가 0개면 창을 열지 않고 false</returns>
+        /// <returns>선택 창을 열었으면 true (후보가 0개여도 체력 회복 카드로 연다)</returns>
         bool OpenLevelUp()
         {
             List<LevelUpOption> options = levelUps.BuildOptions();
-            // TODO(미정): 후보 0개일 때의 대체 카드. 지금은 창을 열지 않고 그냥 넘어간다.
-            if (options.Count == 0) return false;
+            // 후보가 0개면 체력 회복 카드 하나만 보여 준다
+            if (options.Count == 0) options.Add(levelUps.MakeHealOption());
             State = GameState.LevelUp;
             Time.timeScale = 0f;
             Joystick.ResetInput();

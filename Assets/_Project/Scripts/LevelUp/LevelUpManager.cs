@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace ElementMage
 {
-    public enum LevelUpOptionType { Skill, Passive, Evolution }
+    public enum LevelUpOptionType { Skill, Passive, Evolution, Heal }
 
     public class LevelUpOption
     {
@@ -233,7 +233,29 @@ namespace ElementMage
                 case LevelUpOptionType.Evolution:
                     skills.Acquire(option.skill, true);
                     break;
+                case LevelUpOptionType.Heal:
+                    gm.Player.Health.Heal(gm.Player.Health.MaxHp * gm.ConfigAsset.fallbackHealRatio);
+                    break;
             }
+        }
+
+        /// <summary>
+        /// 후보가 0개일 때(모든 스킬·패시브가 최대 레벨이거나 슬롯이 가득 참) 대신 보여 주는 체력 회복 카드
+        /// </summary>
+        public LevelUpOption MakeHealOption()
+        {
+            float ratio = gm.ConfigAsset.fallbackHealRatio;
+            return new LevelUpOption
+            {
+                type = LevelUpOptionType.Heal,
+                weight = 1f,
+                title = "체력 회복",
+                tag = "회복",
+                levelText = "",
+                description = "최대 체력의 " + Mathf.RoundToInt(ratio * 100f) + "%를 회복합니다.",
+                icon = gm.Database.healIcon,
+                accent = new Color(0.45f, 0.95f, 0.55f)
+            };
         }
     }
 }

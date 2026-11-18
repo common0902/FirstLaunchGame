@@ -275,7 +275,14 @@ namespace ElementMage
             MoveOverride = null;
             if (dropXp)
             {
-                XpOrb.Drop(Position, Data.xp);
+                // 처치 즉시 경험치(아주 적은 기본 수입) + 확률로 등급 오브
+                float killXp = Data.xp * GameManager.Config.killXpRatio;
+                if (killXp > 0f)
+                {
+                    XpOrb.XpFromKills += killXp;
+                    GameManager.I.Player.Experience.AddXp(killXp);
+                }
+                XpOrb.DropFromKill(Position, Data);
                 Fx.Puff(Position, Data.visualWidth * 1.3f, Gfx.WithAlpha(Color.white, 0.7f));
                 Vfx.Death(Position, Data.visualWidth);
                 Juice.Shake(IsBoss ? 0.9f : 0.035f);
